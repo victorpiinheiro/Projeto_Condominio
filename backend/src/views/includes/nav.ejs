@@ -1,0 +1,19 @@
+<header>
+    <div class="container">
+      <div class="logo">
+        <h1>Condomínio Ônix</h1>
+      </div>
+      <nav class="nav">
+        <ul>
+
+          <% if (user) { %>
+            <li><a href="/">Inicio</a></li>
+          <li><a href="/login/logout">Sair</a></li>
+        </ul>
+          <% } else { %>
+            <li><a href="/login/index">entrar</a></li>
+          <% }   %>
+
+      </nav>
+    </div>
+  </header>

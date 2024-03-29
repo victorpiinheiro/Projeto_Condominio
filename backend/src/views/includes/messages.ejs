@@ -1,0 +1,21 @@
+
+
+
+  <% if (errors.length > 0) { %>
+    <div class="mensagem-erro">
+            <% errors.forEach(erro =>{ %>
+                <%=  erro %><br>
+                <%  }); %>
+      </div> 
+
+<% } %>
+
+
+  <% if (sucess.length > 0) { %>
+    <div class="mensagem-sucesso">
+            <% sucess.forEach(sucess =>{ %>
+                <%=  sucess %><br>
+                <%  }); %>
+      </div> 
+
+<% } %>

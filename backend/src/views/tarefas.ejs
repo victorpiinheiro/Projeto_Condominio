@@ -1,0 +1,47 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="#">Avisos</a></li>
+            <li><a href="#">Funcionários</a></li>
+            <li><a href="#">Tarefas</a></li>
+            <li><a href="#">Contas</a></li>
+            <li><a href="#">Contatos</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="main-content">
+    <form action="/tarefas/adicionar" method="post" class="task-form">
+        <h2>Nova Tarefa</h2>
+        <%- include('includes/messages') %>
+
+        <div class="form-group">
+            <label for="titulo-tarefa">Título da Tarefa:</label>
+            <input type="text" value="<%=user.titulo %>" name="titulo" >
+        </div>
+        <div class="form-group">
+            <label for="descricao-tarefa">Descrição da Tarefa:</label>
+            <input type="text" value="<%=user.descricao %>"  name="descricao" >
+        </div>
+        <div class="form-group">
+            <label for="data-validade">Data de Validade:</label>
+            <input type="date" value="<%=user.validade %>"   name="validade" >
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" value="<%=user.status %>"  name="status" >
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit">Salvar Tarefa</button>
+        </div>
+    </form>
+</div>
+</div>
+<%- include('includes/footer') %>
